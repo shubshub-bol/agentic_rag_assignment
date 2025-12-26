@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+env/
+
+# Environment variables
+.env
+
+# Vector Store (Local DB)
+faiss_index/
+
+# Logs
+*.log
+
+# Artifacts/Output
+output_*.txt
+output_*.log
+demo_output.txt
+
+# VS Code
+.vscode/
