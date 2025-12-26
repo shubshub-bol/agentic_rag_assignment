@@ -10,8 +10,9 @@ Built with Python, LangGraph, Google Gemini, and FAISS. Designed for clarity and
 - **Semantic Search**: Uses `sentence-transformers` and FAISS for vector retrieval.
 - **Free LLM**: Powered by Google Gemini (`gemini-flash-latest`).
 
-![Agentic RAG Demo](demo.gif)
-*Place your `demo.gif` here to show the tool in action!*
+![Agentic RAG Demo](demo.gif)![demo](https://github.com/user-attachments/assets/f8ffd863-559f-4f62-baf5-96d69a9e08b3)
+
+
 
 ## Setup
 
