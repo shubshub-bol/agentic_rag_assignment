@@ -10,6 +10,9 @@ Built with Python, LangGraph, Google Gemini, and FAISS. Designed for clarity and
 - **Semantic Search**: Uses `sentence-transformers` and FAISS for vector retrieval.
 - **Free LLM**: Powered by Google Gemini (`gemini-flash-latest`).
 
+![Agentic RAG Demo](demo.gif)
+*Place your `demo.gif` here to show the tool in action!*
+
 ## Setup
 
 1. **Install Dependencies**:
@@ -25,7 +28,23 @@ Built with Python, LangGraph, Google Gemini, and FAISS. Designed for clarity and
    > You can get a free key from [Google AI Studio](https://aistudio.google.com/).
 
 3. **PDF Source**:
-   Ensure `retrieval-augmented-generation-options.pdf` is in the project root.
+   The PDF `retrieval-augmented-generation-options.pdf` is **included in this repository**. You do not need to download it manually.
+
+## ⚠️ Important for New Users
+
+If you are cloning this repository, you **MUST** configure the API key for the application to work.
+
+1.  **Create `.env` file**: 
+    The `.env` file is ignored by Git (security). You must create it manually in the project root.
+2.  **Add Key**:
+    File content must look like this:
+    ```bash
+    GOOGLE_API_KEY=your_actual_api_key_here
+    ```
+    *(No quotes, no spaces around the equals sign)*
+
+3.  **Install Dependencies**:
+    Always run `pip install -r requirements.txt` to ensure you have the correct library versions.
 
 ## Usage
 
@@ -42,6 +61,13 @@ Start the interactive assistant:
 python query.py
 ```
 
+
+
+### 3. Quick Demo (Optional)
+Run a script to verify the system without interactive input:
+```bash
+python demo_rag.py
+```
 
 ### Example Output
 ```text

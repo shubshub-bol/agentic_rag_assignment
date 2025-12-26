@@ -48,5 +48,23 @@ class SynthesizerAgent:
         # Invoke LLM
         response = self.llm.invoke(messages)
         
+        # Parse Content (Gemini can return list of parts if grounding is involved)
+        content = response.content
+        final_text = ""
+        
+        if isinstance(content, str):
+            final_text = content
+        elif isinstance(content, list):
+            # Extract text from parts
+            parts = []
+            for part in content:
+                if isinstance(part, dict) and "text" in part:
+                    parts.append(part["text"])
+                elif isinstance(part, str):
+                    parts.append(part)
+            final_text = "\n".join(parts)
+        else:
+            final_text = str(content)
+
         print("\n[Synthesizer] Answer Generated.")
-        return {"final_answer": response.content}
+        return {"final_answer": final_text}
